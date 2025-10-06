@@ -1,0 +1,25 @@
+{
+  "name": "playwright-framework-2025",
+  "version": "1.0.0",
+  "description": "A test project for playwright test framework skeleton",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saganeiro/Playwright-framework-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saganeiro/Playwright-framework-2025/issues"
+  },
+  "homepage": "https://github.com/Saganeiro/Playwright-framework-2025#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
