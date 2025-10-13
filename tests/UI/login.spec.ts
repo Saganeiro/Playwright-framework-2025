@@ -14,7 +14,6 @@ test.describe('FakeStore UI - Login Tests', () => {
     const login = new LoginPage(page);
     await login.goto();
 
-    // Replace with valid test account on FakeStore
     const validUser = process.env.FAKESTORE_USER || 'testuser@testelka.pl';
     const validPass = process.env.FAKESTORE_PASS || 'Test1234!';
 
