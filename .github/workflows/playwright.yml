@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      BASE_URL: ${{ secrets.BASE_URL }}
-      BOOKER_API: ${{ secrets.BOOKER_API }}
       FAKESTORE_USER: ${{ secrets.FAKESTORE_USER }}
       FAKESTORE_PASS: ${{ secrets.FAKESTORE_PASS }}
       GH_USER: ${{ secrets.GH_USER }}
