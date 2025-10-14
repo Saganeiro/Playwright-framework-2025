@@ -10,6 +10,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
+      BOOKER_API: ${{ secrets.BOOKER_API }}
+      FAKESTORE_USER: ${{ secrets.FAKESTORE_USER }}
+      FAKESTORE_PASS: ${{ secrets.FAKESTORE_PASS }}
+      GH_USER: ${{ secrets.GH_USER }}
+      GH_PW: ${{ secrets.GH_PW }}
+      GH_OTP: ${{ secrets.GH_OTP }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +37,7 @@ jobs:
       - name: Run tests
         run: npx playwright test
 
-      - name: Upload HTML report
+      - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
         with:
