@@ -19,7 +19,7 @@ test('GitHub 2FA login', async ({ page }) => {
    .fill(process.env.GH_USER)
   await page.getByLabel('Username or email address').press('Tab')
   await page.getByLabel('Password').fill(process.env.GH_PW)
-  await page.getByRole('button', { name: 'Sign in' }).click()
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click()
   await page.getByPlaceholder('XXXXXX').click()
   await page.getByPlaceholder('XXXXXX').fill(totp.generate())
   await expect(page).toHaveURL("https://github.com/")
