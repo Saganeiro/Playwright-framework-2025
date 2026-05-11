@@ -33,6 +33,17 @@ test.describe('Restful Booker API Tests', () => {
     const body = await response.json();
     expect(body.booking).toBeDefined();
     expect(body.booking.firstname).toBe('John');
+    expect(body.booking.lastname).toBe('Doe');
+    expect(body.booking.totalprice).toBe(150);
+    expect(body.booking.depositpaid).toBe(true);
+    expect(body.booking.additionalneeds).toBe('Breakfast');
+
+    // Optionally, GET the booking by ID
+    const bookingId = body.bookingid;
+    const getResponse = await request.get(`${BASE_URL}/booking/${bookingId}`);
+    expect(getResponse.status()).toBe(200);
+    const retrievedBooking = await getResponse.json();
+    expect(retrievedBooking.firstname).toBe('John');
   });
 
   test('GET /ping - should confirm API is alive', async ({ request }) => {

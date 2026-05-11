@@ -2,8 +2,13 @@
   "name": "playwright-framework-2025",
   "version": "1.0.0",
   "description": "A test project for playwright test framework skeleton",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/UI",
+    "test:api": "playwright test tests/API",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saganeiro/Playwright-framework-2025.git"

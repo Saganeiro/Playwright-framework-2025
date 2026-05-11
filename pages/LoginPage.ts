@@ -29,6 +29,7 @@ export class LoginPage extends BasePage {
 
   async expectLoginFailed() {
     await expect(this.errorMessage).toBeVisible();
+    await expect(this.errorMessage).toContainText('Incorrect username or password');
   }
 
   async expectLoginSuccess() {

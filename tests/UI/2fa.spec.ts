@@ -23,4 +23,5 @@ test('GitHub 2FA login', async ({ page }) => {
   await page.getByPlaceholder('XXXXXX').click()
   await page.getByPlaceholder('XXXXXX').fill(totp.generate())
   await expect(page).toHaveURL("https://github.com/")
+  await expect(page.getByRole('button', { name: 'View profile and more' })).toBeVisible()
 })
